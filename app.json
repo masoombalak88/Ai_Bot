@@ -1,0 +1,47 @@
+{
+    "name": "ᴀɪ-ʙᴏᴛ",
+    "description": "ᴀɪ ʙᴏᴛ ʜᴇʀᴇ",
+    "logo": "https://telegra.ph/file/bc9699c365f82b7ca0f32.jpg",
+    "keywords": ["ᴅᴏᴄᴛᴏʀ", "ᴀɪ-ʙᴏᴛ"],
+    "repository": "https://github.com/masoombalak88/Ai_Bot",
+    "stack": "container",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "A Bot's token from Botfather",
+            "required": true
+        },
+        "OWNER_USERNAME": {
+            "description": "ᴛʏᴘᴇ ʏᴏᴜʀ ᴜsᴇʀɴᴀᴍᴇ ᴡɪᴛʜᴏᴜᴛ @ ʟɪᴋᴇ ᴀᴘɴᴀ_sʏsᴛᴇᴍ",
+            "required": true,
+            "value": ""
+        },
+        "BOT_USERNAME": {
+            "description": "ᴛʏᴘᴇ ʏᴏᴜʀ ʙᴏᴛ ᴜsᴇʀɴᴀᴍᴇ ᴡɪᴛʜᴏᴜᴛ @ ʟɪᴋᴇ ᴀᴘɴᴀ_sʏsᴛᴇᴍ",
+            "required": true,
+            "value": ""
+        },
+        "SUPPORT_GROUP": {
+            "description": "Your Log Group Id For Recieving Admin Messages ( Must Make The Bot Admin In Log Group )",
+            "required": true,
+            "value": ""
+        },
+        "LOG_GROUP_ID": {
+            "description": "ғɪʟʟ ᴀᴘɪ ɪᴅ ғʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ",
+            "required": true,
+            "value": ""
+        }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1
+          }
+      }
+}
