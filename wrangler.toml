@@ -1,0 +1,11 @@
+name = "sugarbot"
+main = "main.ts"
+compatibility_date = "2024-12-23"
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+
+
+
